@@ -1,0 +1,277 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableInvalidOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableUnauthorizedAccount",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "hashPdf",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "nomEtudiant",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "dateEmission",
+          "type": "uint256"
+        }
+      ],
+      "name": "DiplomeEmis",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "hashPdf",
+          "type": "bytes32"
+        }
+      ],
+      "name": "DiplomeRevoque",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "diplomes",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "hashPdf",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "cid",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "nomEtudiant",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "filiere",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "annee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "dateEmission",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "valide",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_hashPdf",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "_cid",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_nomEtudiant",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_filiere",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_annee",
+          "type": "uint256"
+        }
+      ],
+      "name": "emettreDiplome",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_hashPdf",
+          "type": "bytes32"
+        }
+      ],
+      "name": "revoquerDiplome",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_hashPdf",
+          "type": "bytes32"
+        }
+      ],
+      "name": "verifierDiplome",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "hashPdf",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "string",
+              "name": "cid",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "nomEtudiant",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "filiere",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "annee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "dateEmission",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "valide",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct DiplomaCertification.Diplome",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
+}
